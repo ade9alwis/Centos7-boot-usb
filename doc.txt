@@ -1,0 +1,20 @@
+>>>>>>>>>>>Creating Bootable usb by using Centos 7<<<<<<<<<<<<<<<<<<<<<<<<<<
+# Identify the volumn
+
+[root@localhost ~]# fdisk -l
+
+## Here it is necessary to have 8G or higher volume.
+
+### create one single partiotion
+
+[root@localhost ~]#fdisk /dev/sdb
+
+#### Format using vfat, but before that it is necessary to make sure volumn is unmounted.
+
+[root@localhost ~]#mkfs -t vfat /dev/sdb1
+
+#####Issue the following command by giving correct path to the iso image.
+
+[root@localhost ~]#dd if=/home/alwis/Downloads/CentOS-7-x86_64-Minimal-1908.iso of=/dev/sdb bs=8M 
+
+NB:- It is very important to setup bootable volumn as usb in BIOS. 
