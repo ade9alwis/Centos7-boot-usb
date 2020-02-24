@@ -18,3 +18,5 @@
 [root@localhost ~]#dd if=/home/alwis/Downloads/CentOS-7-x86_64-Minimal-1908.iso of=/dev/sdb bs=8M 
 
 NB:-NB:- It is very important to set up the bootable volume as USB in BIOS.
+
+ks=hd:sda1:/path/ks.cfg
